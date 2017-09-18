@@ -1,0 +1,29 @@
+{
+  "name": "ws-cv-ua/ws-simple-admin",
+  "description": "Simple CMS panel",
+  "license": "MIT",
+  "homepage": "https://github.com/ws-cv-ua/ws-admin-simple",
+  "stability":"stable",
+  "minimum-stability":"stable",
+  "authors": [
+    {
+      "name": "Web-Studio.cv.ua",
+      "email": "info@web-studio.cv.ua",
+      "homepage": "http://Web-Studio.cv.ua"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "wscvua\\ws_admin_simple\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1"
+    }
+  }
+}
