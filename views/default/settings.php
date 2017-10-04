@@ -7,10 +7,13 @@ use wscvua\ws_admin_simple\Module;
 use wscvua\ws_admin_simple\widgets\setting_setting\SettingSetWidget;
 
 $this->title = Module::t('app', 'Settings');
-$phone_keys = $labels = $address_keys = $contacts_phones_keys = $contacts_address_keys = $call_keys = $copyright_keys = [];
+$phone_keys = $labels = $address_keys = $contacts_phones_keys = $contacts_address_keys =
+$call_keys = $copyright_keys = $call_title_keys = $call_title_small_keys = [];
 foreach (\wscvua\ws_admin_simple\models\blog\WsLangs::getList() as $lang){
     $phone_keys[] = 'phone_'.$lang;
     $call_keys[] = 'order_call_'.$lang;
+    $call_title_keys[] = 'order_call_title_'.$lang;
+    $call_title_small_keys[] = 'order_call_title_small_'.$lang;
     $address_keys[] = 'address_'.$lang;
     $copyright_keys[] = 'copyright_'.$lang;
     $contacts_phones_keys[] = 'contacts_phones_'.$lang;
@@ -55,11 +58,6 @@ foreach (\wscvua\ws_admin_simple\models\blog\WsLangs::getList() as $lang){
                             </a>
                         </li>
                         <li role="presentation" class="">
-                            <a href="#tab_order_call" role="tab" data-toggle="tab" aria-expanded="false">
-                                <?= Module::t('app', 'Order a call'); ?>
-                            </a>
-                        </li>
-                        <li role="presentation" class="">
                             <a href="#tab_copyright" role="tab" data-toggle="tab" aria-expanded="false">©</a>
                         </li>
                     </ul>
@@ -91,12 +89,6 @@ foreach (\wscvua\ws_admin_simple\models\blog\WsLangs::getList() as $lang){
                                     'Google+',
                                     'Facebook',
                                 ],
-                            ]); ?>
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade" id="tab_order_call" aria-labelledby="profile-tab">
-                            <?= SettingSetWidget::widget([
-                                'keys' => $call_keys,
-                                'labels' => $labels,
                             ]); ?>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="tab_copyright" aria-labelledby="profile-tab">
@@ -259,6 +251,57 @@ foreach (\wscvua\ws_admin_simple\models\blog\WsLangs::getList() as $lang){
                                     'type' => SettingSetWidget::TYPE_TEXT,
                                 ]); ?>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>
+                    <?= Module::t('app', 'Order a call'); ?>
+                </h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul class="nav nav-tabs bar_tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#call_keys" role="tab" data-toggle="tab" aria-expanded="true">
+                                <?= Module::t('app', 'Labels'); ?>
+                            </a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a href="#call_title_keys" role="tab" data-toggle="tab" aria-expanded="false">
+                                <?= Module::t('app', 'Title'); ?>
+                            </a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a href="#call_title_small_keys" role="tab" data-toggle="tab" aria-expanded="false">
+                                <?= Module::t('app', 'Small title'); ?>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade active in" id="call_keys"
+                             aria-labelledby="home-tab">
+                            <? echo  SettingSetWidget::widget([
+                                'keys' => $call_keys,
+                                'labels' => $labels,
+                            ]); ?>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="call_title_keys" aria-labelledby="profile-tab">
+                            <?= SettingSetWidget::widget([
+                                'keys' => $call_title_keys,
+                                'labels' => $labels,
+                            ]); ?>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="call_title_small_keys" aria-labelledby="profile-tab">
+                            <?= SettingSetWidget::widget([
+                                'keys' => $call_title_small_keys,
+                                'labels' => $labels,
+                            ]); ?>
                         </div>
                     </div>
                 </div>

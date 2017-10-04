@@ -1,4 +1,6 @@
 <?php
+ini_set('post_max_size', '20M');
+ini_set('upload_max_filesize', '20M');
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -51,7 +53,8 @@ $before = '['.$model->model_id.']['.$model->var_name.']';
                 'showCaption'           => true,
                 'showUpload'            => false,
                 'showRemove'            => true,
-                'initialCaption'        => ''
+                'initialCaption'        => '',
+                'maxFileSize'           => false
             ],
             'pluginEvents' =>  [
                 "fileimagesloaded" => "function(event) {

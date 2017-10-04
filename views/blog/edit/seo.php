@@ -7,7 +7,7 @@ $langs = \wscvua\ws_admin_simple\models\blog\WsLangs::getList();
 <div class="" role="tabpanel" data-example-id="togglable-tabs">
     <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
         <? foreach($langs as $id => $code){ ?>
-            <li role="presentation" <?= $code == 'ua' ? 'class="active"' : '' ?> >
+            <li role="presentation" <?= $code == 'uk' ? 'class="active"' : '' ?> >
                 <a href="#seo-<?=$code?>"
                    id="seo-<?=$code?>-tab"
                    role="tab"
@@ -20,7 +20,7 @@ $langs = \wscvua\ws_admin_simple\models\blog\WsLangs::getList();
         <? foreach($langs as $id => $code){
             $content = $page->getContent($id);?>
             <div role="tabpanel"
-                 class="tab-pane fade <?= $code == 'ua' ? "active" : '' ?> in"
+                 class="tab-pane fade <?= $code == 'uk' ? "active" : '' ?> in"
                  id="seo-<?=$code?>"
                  aria-labelledby="seo-<?=$code?>-tab">
                 <div class="x_panel">

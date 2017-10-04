@@ -1,6 +1,6 @@
 <?php
 return [
-    'ua' => 'Ukrainian',
+    'uk' => 'Ukrainian',
     'ru' => 'Russian',
     'en' => 'English',
     '' => '',

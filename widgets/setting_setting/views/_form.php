@@ -11,7 +11,7 @@ use \wscvua\ws_admin_simple\widgets\setting_setting\SettingSetWidget;
 $before = isset($key) && $key ? '['.$key.']' : '';
 echo $form->field($model, $before.'key')->hiddenInput()->label(false);
 switch ($type){
-    case SettingSetWidget::TYPE_TEXT :
+    case SettingSetWidget::TYPE_TEXT:
         echo $form->field($model, $before.'value',[
             'template' => "{label}\n<div class='col-md-10 col-sm-9 col-xs-12'>{input}\n{hint}\n{error}</div>",
             'labelOptions' => ['class' => 'control-label col-md-2 col-sm-3 col-xs-12 tar'],
@@ -19,7 +19,7 @@ switch ($type){
             'id' => 'settings-value-'.$model->key
         ])->label($label);
         break;
-    case SettingSetWidget::TYPE_BOOLEAN :
+    case SettingSetWidget::TYPE_BOOLEAN:
         echo $form->field($model, $before.'value', [
             'template' => "{label}\n<div class='col-md-10 col-sm-9 col-xs-12'>{input}\n{hint}\n{error}</div>",
             'labelOptions' => ['class' => 'control-label col-md-2 col-sm-3 col-xs-12 tar'],

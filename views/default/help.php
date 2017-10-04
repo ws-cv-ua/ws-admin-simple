@@ -38,5 +38,8 @@ $this->registerCss($css);
         <div class="col-md-4">
             <?= $this->render('help/langs'); ?>
         </div>
+        <div class="col-md-4">
+            <?= $this->render('help/menu'); ?>
+        </div>
     </div>
 </div>

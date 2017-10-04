@@ -33,7 +33,7 @@ echo $form->field($model, 'page_id', [
 <div class="" role="tabpanel" data-example-id="togglable-tabs">
     <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
         <? foreach($langs as $id => $code){ ?>
-            <li role="presentation" <?= $code == 'ua' ? 'class="active"' : '' ?> >
+            <li role="presentation" <?= $code == 'uk' ? 'class="active"' : '' ?> >
                 <a href="#menu-<?=$code?>"
                    id="menu-<?=$code?>-tab"
                    role="tab"
@@ -45,7 +45,7 @@ echo $form->field($model, 'page_id', [
     <div id="myTabContent" class="tab-content">
         <? foreach ($model->items as $lang=>$item){ ?>
             <div role="tabpanel"
-                 class="tab-pane fade <?= $lang == 'ua' ? "active" : '' ?> in"
+                 class="tab-pane fade <?= $lang == 'uk' ? "active" : '' ?> in"
                  id="menu-<?=$lang?>"
                  aria-labelledby="menu-<?=$lang?>-tab">
                  <?= $this->render('menu-item',[

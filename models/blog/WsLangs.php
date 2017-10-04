@@ -91,7 +91,7 @@ class WsLangs extends \yii\db\ActiveRecord
         $lang = self::currentLang();
         if($lang){
             switch (strtolower($lang->local)){
-                case 'ua':
+                case 'uk':
                 case 'ru':
                     $format = 'dd.mm.yyyy';
                     break;
