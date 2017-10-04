@@ -1,0 +1,117 @@
+div.has-error #loginform-password,
+div.has-error #loginform-username{
+    margin-bottom: 1;
+}
+#login-form p.help-block-error{
+    margin-top: 0;
+}
+.language{
+    margin-right: 10px;
+}
+.create-btn{
+    color: white;
+    border-radius: 50%;
+}
+.create-btn span{
+    color: white;
+    margin: 0;
+    padding: 5px 10px;
+    margin-top: -8px;
+}
+.flr{
+    float: right !important;
+}
+.fll{
+    float: left !important;
+}
+.tac{
+    text-align: center !important;
+}
+.tal{
+    text-align: left !important;
+}
+.tar{
+    text-align: right !important;
+}
+.no-result{
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+}
+.seo-img{
+    max-width: 120px;
+    max-height: 120px;
+}
+ul.bar_tabs{
+    background: none;
+}
+td.edit>a{
+    margin: 0 5px;
+}
+.position-column{
+    cursor: pointer;
+}
+.position-row{
+    cursor: pointer;
+    font-size: 18px;
+}
+.no-caption .file-thumbnail-footer,
+.no-caption .close{
+    display: none;
+}
+li.active>.nav.child_menu{
+    display: block;
+}
+.tree{
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 25px;
+}
+.tree li{
+    /*margin: 7px 0;*/
+    border-top: 1px solid #ddd;
+}
+.tree li a:hover{
+
+}
+.tree.lvl-0{
+    border: 1px solid #ddd;
+}
+.tree.lvl-0>li:first-child{
+    border-top: 0px;
+}
+.tree li .del-link{
+    transition: 0.5s;
+    color: red;
+    margin: 0 10px;
+}
+.tree .move-li{
+    font-size: 17px;
+    margin: 6px 10px;
+
+}
+.file-preview-image{
+    max-width: 100%;
+}
+.pad-0{
+    padding: 0;
+}
+.pad-0-5{
+    padding: 0px 5px;
+}
+.fixed-buttons{
+    position: fixed;
+    top: 70px;
+    z-index: 1000;
+    right: 25px;
+}
+#page-edit-pjax{
+    height: calc(100% - 165px);
+    position: fixed;
+    overflow-x: auto;
+}
+footer{
+    margin-top: -20px;
+    padding: 2px 20px;
+    background: none;
+}
