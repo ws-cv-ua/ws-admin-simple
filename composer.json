@@ -14,7 +14,15 @@
   ],
   "require": {
     "php": ">=5.4",
-    "yiisoft/yii2": "*"
+    "yiisoft/yii2": "*",
+    "yiidoc/yii2-redactor": "*",
+    "codemix/yii2-localeurls": "^1.4",
+    "kartik-v/yii2-widget-datetimepicker": "*",
+    "kartik-v/yii2-widget-datepicker": "@dev",
+    "kartik-v/yii2-widget-timepicker": "*",
+    "kartik-v/yii2-widget-fileinput": "@dev",
+    "alexandernst/yii2-device-detect": "0.0.12",
+    "nezhelskoy/yii2-highlight": "*"
   },
   "autoload": {
     "psr-4": {
